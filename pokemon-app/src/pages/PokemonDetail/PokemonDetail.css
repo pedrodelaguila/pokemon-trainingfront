@@ -1,0 +1,18 @@
+.detail-pokemon-image{
+    width:100px;
+    height: auto;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.info-section-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 10px;
+}

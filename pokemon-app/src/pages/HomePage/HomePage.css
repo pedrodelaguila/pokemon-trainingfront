@@ -1,0 +1,103 @@
+/* PageTitle styling */
+.page-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem; /* equivalent to text-5xl */
+    font-weight: 900;
+    text-align: center;
+    color: transparent;
+    background-image: linear-gradient(to right,#facc15, #3b82f6); /* red to yellow to blue */
+    background-clip: text;
+    -webkit-background-clip: text;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0;
+    position: relative;
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.7));
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.page-title:hover {
+    transform: scale(1.05);
+}
+
+/* Media queries for responsive text size */
+@media (min-width: 768px) {
+    .page-title {
+        font-size: 3.75rem; /* equivalent to md:text-6xl */
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-title {
+        font-size: 4.5rem; /* equivalent to lg:text-7xl */
+    }
+}
+
+body {
+    background-color: black;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+            radial-gradient(1px 1px at 20% 30%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 40% 70%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 50% 40%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 60% 80%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 80% 10%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 10% 50%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 90% 60%, white, rgba(0,0,0,0) 4px),/* Additional stars */
+            radial-gradient(1px 1px at 15% 15%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 25% 55%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 35% 25%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 45% 85%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 55% 65%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 65% 35%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 75% 95%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 85% 45%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 95% 25%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 5% 75%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 33% 92%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 72% 23%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 48% 12%, white, rgba(0,0,0,0) 4px),
+            radial-gradient(1px 1px at 87% 77%, white, rgba(0,0,0,0) 4px);
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: twinkle 10s ease infinite alternate;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+/* Add this to ensure the content appears above the stars */
+#root {
+    position: relative;
+    z-index: 1;
+}
+
+.cards-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}

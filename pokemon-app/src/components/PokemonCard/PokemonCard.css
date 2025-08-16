@@ -1,0 +1,171 @@
+.card-container {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 4px solid #3b82f6; /* Changed to a more visible blue border */
+    position: relative;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+
+    /* Fixed dimensions */
+    width: 280px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+
+    /* Ensures content fits properly */
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    z-index: 2; /* Ensure it's above the background */
+}
+
+.card-container:hover {
+    border-color: #facc15; /* Changes to yellow on hover */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-5px);
+}
+
+/* Stat label */
+.stat-label {
+    /* From Tailwind classes */
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+
+    /* From custom CSS properties */
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    letter-spacing: 0.01em;
+    margin-left: 70px;
+    padding-right: 3px;
+}
+
+.pokemon-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 0.75rem;
+
+    /* Match the gradient from your page title */
+    background: linear-gradient(45deg, #facc15, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    /* Optional enhancements */
+    filter: drop-shadow(0 0 2px rgba(59, 130, 246, 0.3));
+    letter-spacing: 0.02em;
+}
+
+.pokemon-name:hover {
+    /* Reverse gradient on hover */
+    background: linear-gradient(45deg, #3b82f6, #facc15);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.pokemon-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+}
+
+.pokemon-image:hover {
+    transform: scale(1.1);
+}
+
+.result-label {
+    color: #3b82f6;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    letter-spacing: 0.01em;
+    text-shadow: 0 0 2px rgba(250, 204, 21, 0.3);
+    transition: color 0.2s ease;
+    padding-left: 5px;
+}
+
+.result-label:hover {
+    color: #facc15;
+}
+
+.ability-badge {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    border: 1px solid #3b82f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.ability-badge:hover {
+    background-color: rgba(250, 204, 21, 0.1);
+    color: #facc15;
+    border-color: #facc15;
+}
+
+.ability-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.type-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+    padding-top: 5px;
+}
+
+.type-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    /* Removed margin-right: 150px; */
+}
+
+.stat-type-label {
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    letter-spacing: 0.01em;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+    margin-left: 70px;
+}
+
+.stat-type-label:hover {
+    color: #facc15;
+    text-shadow: 0 0 2px rgba(250, 204, 21, 0.3);
+}
+
+.stat-row {
+    display: flex;
+    padding-bottom: 7px;
+}
+
+.ability{
+    padding-top: 5px;
+}

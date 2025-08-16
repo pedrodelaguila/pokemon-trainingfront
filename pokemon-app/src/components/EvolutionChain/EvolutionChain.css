@@ -1,0 +1,106 @@
+.evolution-chain {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    border: 4px solid #3b82f6;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.evolution-chain:hover {
+    border-color: #facc15;
+    box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.2), 0 15px 15px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.evolution-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.evolution-item:hover {
+    background-color: rgba(250, 204, 21, 0.1);
+    border-color: rgba(250, 204, 21, 0.3);
+    transform: scale(1.05);
+}
+
+.evolution-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.evolution-item img:hover {
+    transform: scale(1.1);
+}
+
+.evolution-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    background: linear-gradient(45deg, #facc15, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 2px rgba(59, 130, 246, 0.3));
+    letter-spacing: 0.02em;
+}
+
+.evolution-branches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.evolution-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.evolution-arrow {
+    color: #3b82f6;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    transition: all 0.3s ease;
+}
+
+.evolution-arrow:hover {
+    color: #facc15;
+    text-shadow: 0 0 5px rgba(250, 204, 21, 0.5);
+    transform: scale(1.2);
+}
+
+/* Responsive layout */
+@media (min-width: 640px) {
+    .evolution-branch {
+        flex-direction: row;
+    }
+
+    .evolution-arrow {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 639px) {
+    .evolution-branches {
+        flex-direction: column;
+    }
+}
